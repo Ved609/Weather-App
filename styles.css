@@ -1,28 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="app-wrap">
-    <header>
-      <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
-    </header>
-    <main>
-      <section class="location">
-        <div class="city">City, Country</div>
-        <div class="date">Date</div>
-      </section>
-      <div class="current">
-        <div class="temp">0<span>°c</span></div>
-        <div class="weather">Weather</div>
-        <div class="hi-low">0°c / 0°c</div>
-      </div>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('background.jpg'); /* Add your background image URL here */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-wrap {
+  background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent background color for better readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 320px;
+}
+
+header {
+  padding: 20px;
+}
+
+header input {
+  width: calc(100% - 40px);
+  max-width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+header input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+main {
+  padding: 20px;
+}
+
+.location .city {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.location .date {
+  color: #666;
+  font-size: 14px;
+}
+
+.current .temp {
+  color: #333;
+  font-size: 72px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.current .temp span {
+  font-weight: normal;
+}
+
+.current .weather {
+  color: #666;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.current .hi-low {
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+}
